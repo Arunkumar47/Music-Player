@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.top{
+	height: 300px;
+	width: 100%;
+	background-color: red;
+	position: absolute;
+}
+
+h1{
+	font-size: 40px;
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+	margin-top: 60px;
+}
+
+.wrapper{
+	width: 327px;
+	height: 327px;
+	background-color: black;
+	position: absolute;
+	left: 50%;
+	margin-left: -164px;
+	margin-top: 150px;
+	border-radius: 170px;
+}
+
+.outercircle{
+	width: 327px;
+	height: 327px;
+	background-image: url(img/spinner-outer.png);
+	position: absolute;
+	left: 50%;
+	margin-left: -164px;
+}
+
+.playing .outercircle {
+	-webkit-animation:  outer 4s linear infinite;
+}
+
+@keyframes outer{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+.innercircle{
+	width: 200px;
+	height: 200px;
+	background-image: url(img/spinner-center.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: 65px;
+}
+
+.playing .innercircle {
+	-webkit-animation:  inner 4s linear infinite;
+}
+
+@keyframes inner{
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+.playersprite{
+	width: 70px;
+	height: 70px;
+	background-image: url('img/play-sprite.png');
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin-left: -35px;
+	margin-top: -35px;
+}
+
+.playing .playersprite{
+	background-position: 0 -70px;
+}
+
+.next{
+	content: "";
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	position: absolute;
+	border-radius: 100px;
+	left: 50%;
+	margin-left: 200px;
+	margin-top: 200px;
+}
+
+.back{
+	content: "";
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+	position: absolute;
+	border-radius: 100px;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: 200px;
+}
